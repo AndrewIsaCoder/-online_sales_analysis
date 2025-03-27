@@ -1,4 +1,5 @@
 from product_manager import ProductManager
+from cart import Cart as cart
 
 manager = ProductManager()
 
@@ -42,3 +43,15 @@ while True:
         break
     else:
         print("Invalid option. Please try again.")
+        
+        
+cart.add_to_cart(manager.products[0])  # Add Laptop
+cart.add_to_cart(manager.products[1])  # Add Smartphone
+cart.add_to_cart(manager.products[2])  # Add Headphones
+
+# Display the cart contents
+cart.display_cart()
+
+# Display the total value of the cart
+total = cart.calculate_total()
+print(f"\nTotal value of the cart: {total:.2f}")
