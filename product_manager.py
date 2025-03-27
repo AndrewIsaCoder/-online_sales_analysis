@@ -1,23 +1,24 @@
 import product as p
-class ProductManager():
+
+class ProductManager:
     def __init__(self):
-        self.products = [] #lista de produse
-    
-        def add_product(self , name , price , quantity): #adaugare de produse noi
-            produs = p.Product(name , price , quantity)
-            self.products.append(produs)
-            print(f"Product {name} added successfully.")
-        
-        def afisare_toate_produsele(self):
-            if not self.products:
-                print("No products available.")
-            else:
-                for produs in self.products:
-                    produs.afisare_informatii_produs()
-                    
-        def afisare_valoare_totala(self):
-            total_value = sum(produs.price * produs.quantity for produs in self.products)
-            print(f"TOTAL VALUE OF THE PRODUCTS IN STOCK : {total_value}")
+        self.products = []  # List to store products
+
+    def adauga_produs(self, name, price, quantity):  # Correctly indented
+        produs = p.Product(name, price, quantity)
+        self.products.append(produs)
+        print(f"Product '{name}' added successfully.")
+
+    def afisare_toate_produsele(self):  # Correctly indented
+        if not self.products:
+            print("No products available.")
+        else:
+            for produs in self.products:
+                produs.afisare_informatii_produs()
+
+    def afisare_valoare_totala(self):  # Correctly indented
+        total_value = sum(produs.price * produs.quantity for produs in self.products)
+        print(f"TOTAL VALUE OF THE PRODUCTS IN STOCK: {total_value}")
                 
 if __name__ == "__main__":
     manager = ProductManager()

@@ -5,7 +5,7 @@ class Product():
         self.quantity = quantity
     
     def afisare_informatii_produs(self): #afisare informatii produs
-        print(f"Product name: {self.name} /n Product price: {self.price} /n Product quantity: {self.quantity}")
+        print(f"Product name: {self.name}\nProduct price: {self.price}\n Product quantity {self.quantity}")
         
     def actualizare_cantitate_produs(self):
         a = input("Do you want to update the product quantity? (yes/no):")
