@@ -1,0 +1,9 @@
+#Fisierele propriu-zise:
+config.json
+
+#poze
+
+*.png
+*.jpg
+*.jpeg
+*.gif
